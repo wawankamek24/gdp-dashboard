@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProductCraft | PM Mentorship & Advisory</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3 cursor-pointer">
+                <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-brand-500/30">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">Product<span class="text-brand-600">Craft</span></span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600 text-sm">
+                <a href="#layanan" class="hover:text-brand-600 transition-colors">Layanan</a>
+                <a href="#keunggulan" class="hover:text-brand-600 transition-colors">Keunggulan</a>
+                <a href="#kalkulator" class="hover:text-brand-600 transition-colors">Kalkulator Karir</a>
+                <a href="#testimoni" class="hover:text-brand-600 transition-colors">Testimoni</a>
+            </nav>
+
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#booking" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-md hover:shadow-lg">
+                    Konsultasi Gratis <i class="fa-solid fa-arrow-right ml-1"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-600 text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#layanan" class="block py-2 text-slate-600 font-medium">Layanan</a>
+            <a href="#keunggulan" class="block py-2 text-slate-600 font-medium">Keunggulan</a>
+            <a href="#kalkulator" class="block py-2 text-slate-600 font-medium">Kalkulator Karir</a>
+            <a href="#testimoni" class="block py-2 text-slate-600 font-medium">Testimoni</a>
+            <a href="#booking" class="block w-full text-center bg-brand-600 text-white py-3 rounded-xl font-semibold mt-4">Konsultasi Gratis</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs sm:text-sm font-medium">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        Mentorship 1-on-1 Bersama Lead Product Manager
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                        Akselerasi Karir <br class="hidden sm:inline"/>
+                        <span class="gradient-text">Product Manager</span> Berkelas
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Bimbingan praktis dari PM praktisi industri. Bangun portofolio studi kasus yang memikat recruiter, kuasai interview PM, dan tingkatkan value Anda hingga 2x lipat.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#booking" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg shadow-brand-500/25 transition-all text-center">
+                            Pesan Sesi Mentorship
+                        </a>
+                        <a href="#layanan" class="bg-white hover:bg-slate-100 border border-slate-300 text-slate-700 font-semibold px-8 py-4 rounded-xl transition-all text-center">
+                            Lihat Layanan
+                        </a>
+                    </div>
+
+                    <!-- Social Proof Mini -->
+                    <div class="pt-6 border-t border-slate-200/80 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-slate-500 text-sm">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-brand-600"></i> 50+ Mentee Lulus
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check-circle text-brand-600"></i> 90% Hiring Rate
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-amber-400"></i> 4.9/5 Rating
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Visual Card -->
+                <div class="lg:col-span-5 relative">
+                    <div class="bg-gradient-to-tr from-brand-600 to-indigo-600 rounded-3xl p-1 shadow-2xl">
+                        <div class="bg-white rounded-[22px] p-6 space-y-6">
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden flex items-center justify-center text-slate-500 font-bold">
+                                        <i class="fa-solid fa-user-tie text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-slate-900">Mentor PM Expert</h4>
+                                        <p class="text-xs text-slate-500">Senior PM di Enterprise Tech</p>
+                                    </div>
+                                </div>
+                                <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-1 rounded-full font-semibold">Available</span>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between text-sm">
+                                    <span class="text-slate-600"><i class="fa-solid fa-file-code text-brand-600 mr-2"></i> PRD & Case Study Review</span>
+                                    <span class="font-bold text-slate-800">100% Mentored</span>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between text-sm">
+                                    <span class="text-slate-600"><i class="fa-solid fa-comments text-indigo-600 mr-2"></i> Mock Interview 1-on-1</span>
+                                    <span class="font-bold text-slate-800">Real Feedback</span>
+                                </div>
+                                <div class="p-3 bg-slate-50 rounded-xl flex items-center justify-between text-sm">
+                                    <span class="text-slate-600"><i class="fa-solid fa-chart-line text-emerald-600 mr-2"></i> Career Roadmap</span>
+                                    <span class="font-bold text-slate-800">Customized</span>
+                                </div>
+                            </div>
+
+                            <div class="p-4 bg-brand-50 rounded-xl border border-brand-100 text-center">
+                                <p class="text-xs text-brand-700 font-medium">Sesi Terdekat: <strong class="text-brand-900">Sabtu & Minggu Ini</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-bold tracking-widest text-brand-600 uppercase">Layanan Unggulan</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Pilih Program Sesuai Kebutuhan Karir Anda</h3>
+                <p class="text-slate-600">Dirancang khusus untuk membantu Anda melewati hambatan spesifik dalam dunia Product Management.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Portfolio & PRD Review</h4>
+                        <p class="text-slate-600 text-sm mb-6">Bimbingan menyusun dokumen PRD dan portofolio studi kasus produk yang realistis dan menarik minat HR/Hiring Manager.</p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Audit Portofolio Eksisting</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Template PRD standar industri</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Feedback tertulis rinci</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900 mb-4">Rp 350.000 <span class="text-xs font-normal text-slate-500">/ sesi</span></div>
+                        <button onclick="selectService('Portfolio & PRD Review')" class="w-full bg-slate-900 hover:bg-brand-600 text-white font-medium py-3 rounded-xl transition-colors">Pilih Layanan</button>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Popular) -->
+                <div class="bg-slate-900 text-white rounded-2xl p-8 border border-slate-800 shadow-2xl relative flex flex-col justify-between transform md:-translate-y-2">
+                    <div class="absolute -top-4 right-6 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-900 text-xs font-extrabold uppercase px-3 py-1 rounded-full">
+                        Paling Diminati
+                    </div>
+                    <div>
+                        <div class="w-12 h-12 bg-brand-500/20 text-brand-400 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fa-solid fa-user-ninja"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Mock Interview PM</h4>
+                        <p class="text-slate-300 text-sm mb-6">Simulasi wawancara PM 1-on-1 (Product Sense, Execution, Leadership) lengkap dengan evaluasi menyeluruh.</p>
+                        <ul class="space-y-2 text-sm text-slate-300 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Simulasi Real-Time 60 Menit</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Framework Jawaban (CIRCLES/BUS)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-400"></i> Rekaman & Catatan Evaluasi</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-white mb-4">Rp 500.000 <span class="text-xs font-normal text-slate-400">/ sesi</span></div>
+                        <button onclick="selectService('Mock Interview PM')" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-medium py-3 rounded-xl transition-colors">Pilih Layanan</button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-2xl p-8 border border-slate-200 hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900 mb-2">Consultation for Startup/UMKM</h4>
+                        <p class="text-slate-600 text-sm mb-6">Sesi strategi produk untuk founder. Validasi ide, pembuatan MVP roadmap, dan teknik penentuan fitur prioritas.</p>
+                        <ul class="space-y-2 text-sm text-slate-600 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Product Discovery Strategy</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Feature Prioritization Matrix</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500"></i> Metrics & KPI Mapping</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900 mb-4">Rp 750.000 <span class="text-xs font-normal text-slate-500">/ sesi</span></div>
+                        <button onclick="selectService('Consultation for Startup/UMKM')" class="w-full bg-slate-900 hover:bg-brand-600 text-white font-medium py-3 rounded-xl transition-colors">Pilih Layanan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Career ROI Calculator Section -->
+    <section id="kalkulator" class="py-16 bg-slate-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-200 space-y-8">
+                <div class="text-center space-y-2">
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Hitung Potensi Kenaikan Gaji Anda</h3>
+                    <p class="text-slate-600 text-sm">Lihat estimasi ROI setelah menguasai skill & portofolio Product Management.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Gaji Bulanan Anda Saat Ini (Rp)</label>
+                            <input type="number" id="currentSalary" value="8000000" step="1000000" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Target Peran Karir</label>
+                            <select id="targetRole" class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none">
+                                <option value="1.4">Junior / Associate PM (+40%)</option>
+                                <option value="1.8" selected>Mid-Level PM (+80%)</option>
+                                <option value="2.5">Senior PM / Lead PM (+150%)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-50 rounded-2xl p-6 border border-brand-100 text-center space-y-4">
+                        <span class="text-xs font-bold text-brand-700 uppercase tracking-wider">Proyeksi Gaji Baru</span>
+                        <div id="projectedSalary" class="text-3xl sm:text-4xl font-extrabold text-brand-700">Rp 14.400.000</div>
+                        <p class="text-xs text-slate-500">Estimasi peningkatan rata-rata industri setelah upgrade skill & lolos interview PM.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimoni" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h3 class="text-3xl font-bold text-slate-900">Apa Kata Mereka?</h3>
+                <p class="text-slate-600 mt-2">Kisah sukses dari profesional yang telah dibimbing.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic mb-4">"Sesi Mock Interview bener-bener ngebuka mata. Dikasih tahu cara menstruktur jawaban pakai framework yang jelas. Akhirnya dapet offer Associate PM!"</p>
+                    <div class="font-bold text-slate-900 text-sm">Rian K.</div>
+                    <div class="text-xs text-slate-500">Ex-Software Engineer &rarr; APM Fintech</div>
+                </div>
+
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic mb-4">"PRD Review-nya sangat mendalam. Portofolio saya yang tadinya berantakan jadi punya alur bercerita (storytelling) yang disukai hiring manager."</p>
+                    <div class="font-bold text-slate-900 text-sm">Siti Nurhaliza</div>
+                    <div class="text-xs text-slate-500">Product Marketing &rarr; PM Edtech</div>
+                </div>
+
+                <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                    <div class="flex items-center gap-1 text-amber-400 mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-slate-600 text-sm italic mb-4">"Bagi saya yang founder pemula, sesi konsultasi produk membantu banget menentukan mana fitur wajib MVP dan mana yang bisa ditunda."</p>
+                    <div class="font-bold text-slate-900 text-sm">Budi Santoso</div>
+                    <div class="text-xs text-slate-500">Founder Micro-SaaS</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking" class="py-16 bg-slate-900 text-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-800 rounded-3xl p-8 sm:p-10 border border-slate-700 shadow-2xl space-y-6">
+                <div class="text-center space-y-2">
+                    <h3 class="text-3xl font-extrabold">Jadwalkan Sesi Mentorship</h3>
+                    <p class="text-slate-400 text-sm">Isi formulir di bawah ini. Kami akan menghubungi Anda melalui WhatsApp/Email dalam 1x24 jam.</p>
+                </div>
+
+                <form id="bookingForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Nama Lengkap</label>
+                        <input type="text" id="fullName" required placeholder="Contoh: Budi Pratama" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Nomor WhatsApp</label>
+                            <input type="tel" id="whatsapp" required placeholder="08123456789" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Pilihan Layanan</label>
+                            <select id="selectedService" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500">
+                                <option value="Portfolio & PRD Review">Portfolio & PRD Review</option>
+                                <option value="Mock Interview PM">Mock Interview PM</option>
+                                <option value="Consultation for Startup/UMKM">Consultation for Startup/UMKM</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-300 mb-1">Pesan / Target Utama Anda</label>
+                        <textarea id="notes" rows="3" placeholder="Ceritakan singkat latar belakang dan apa yang ingin Anda capai..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-brand-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-brand-500/30">
+                        Kirim Permintaan Konsultasi
+                    </button>
+                </form>
+
+                <!-- Feedback Message -->
+                <div id="successMessage" class="hidden p-4 bg-emerald-900/50 border border-emerald-500 text-emerald-200 rounded-xl text-center text-sm font-medium">
+                    <i class="fa-solid fa-circle-check text-emerald-400 mr-2"></i> Terima kasih! Permintaan Anda berhasil dikirim. Kami akan segera menghubungi Anda melalui WhatsApp.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto bg-slate-950 text-slate-400 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+            <div>
+                &copy; 2026 ProductCraft Studio. Built for Product Professionals.
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" class="hover:text-white transition-colors">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Toggle Mobile Menu
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // ROI Calculator Logic
+        const currentSalaryInput = document.getElementById('currentSalary');
+        const targetRoleSelect = document.getElementById('targetRole');
+        const projectedSalaryDisplay = document.getElementById('projectedSalary');
+
+        function calculateROI() {
+            const currentSalary = parseFloat(currentSalaryInput.value) || 0;
+            const multiplier = parseFloat(targetRoleSelect.value) || 1;
+            const projected = currentSalary * multiplier;
+            
+            projectedSalaryDisplay.textContent = 'Rp ' + Math.round(projected).toLocaleString('id-ID');
+        }
+
+        currentSalaryInput.addEventListener('input', calculateROI);
+        targetRoleSelect.addEventListener('change', calculateROI);
+
+        // Select Service shortcut from cards
+        function selectService(serviceName) {
+            const selectEl = document.getElementById('selectedService');
+            selectEl.value = serviceName;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Handle Form Submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('bookingForm');
+            const successMsg = document.getElementById('successMessage');
+
+            // Hide form and show success message
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
